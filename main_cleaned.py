@@ -127,7 +127,7 @@ def find_orfs_in_protein(aa_sequence, dna_sequence=None, frame=0, is_reverse=Fal
                 'aa_end': end_aa_pos if end_aa_pos < len(aa_sequence) else len(aa_sequence) - 1,
                 'dna_start': dna_start_pos,
                 'dna_end': dna_end_pos,
-                'length_aa': len(orf_sequence),
+                'length_aa': len(orf_sequence) - 1,
                 'length_nt': (dna_end_pos - dna_start_pos + 1) if dna_sequence else -1,
                 'sequence': orf_sequence,
                 'dna_sequence': dna_sequence_of_orf
